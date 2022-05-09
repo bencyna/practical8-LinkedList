@@ -4,3 +4,8 @@ LinkedList::LinkedList()
 {
 
 }
+
+LinkedList::~LinkedList()
+{
+
+}
