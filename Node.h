@@ -6,16 +6,15 @@
 class Node
 {
 public:
-    Node();
+    Node(int data, Node * next);
     int getData();
     void setData(int data);
-    int * getNext();
-    void setNext(int*next);
+    Node * getNext();
+    void setNext(Node*next);
 
 private:
     int data;
-    int * next;
-
+    Node * next;
 };
 
 #endif

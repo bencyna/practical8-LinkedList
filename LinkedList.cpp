@@ -1,4 +1,6 @@
 #include "LinkedList.h"
+#include "Node.h"
+#include <cstddef>
 
 LinkedList::LinkedList()
 {
@@ -11,13 +13,9 @@ LinkedList::LinkedList(int list[100], int size)
 }
 
 
-LinkedList::~LinkedList()
-{
-
-}
-
 void LinkedList::addFront(int newItem) {
-
+    Node* node = new Node(newItem, this->head);
+    head = node;
 }
 
 void LinkedList::addEnd(int newItem) {

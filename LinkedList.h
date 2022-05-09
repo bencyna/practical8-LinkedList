@@ -3,6 +3,8 @@
 
 #pragma once
 
+#include "Node.h"
+
 #include <array>
 
 class LinkedList
@@ -22,7 +24,7 @@ public:
     ~LinkedList();
 
 private:
-    int * head;
+    Node * head;
 
 };
 

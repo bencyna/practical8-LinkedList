@@ -1,8 +1,9 @@
 #include "Node.h"
 
-Node::Node()
+Node::Node(int data, Node * next)
 {
-
+    this->data = data;
+    this->next = next;
 }
 
 int Node::getData()
@@ -14,11 +15,11 @@ void Node::setData(int dataInp){
     data = dataInp;
 }
 
-int * Node::getNext()
+Node * Node::getNext()
 {
     return next;
 }
 
-void Node::setNext(int * next){
+void Node::setNext(Node * next){
     this->next = next;
 }
