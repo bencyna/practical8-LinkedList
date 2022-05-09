@@ -2,7 +2,7 @@
 
 LinkedList::LinkedList()
 {
-
+    head = NULL;
 }
 
 LinkedList::LinkedList(int list[100], int size)
