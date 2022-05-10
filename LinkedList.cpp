@@ -12,7 +12,14 @@ LinkedList::LinkedList()
 
 LinkedList::LinkedList(int list[100], int size)
 {
+    // meed to change thjis
+    head = new Node(list[0], this->head);
+    Node *prevNode = head;
 
+    for (int i = 1; i < size; i++) {
+        Node* node = new Node(list[i], this->head);
+        prevNode->setNext(node);
+    }
 }
 
 
