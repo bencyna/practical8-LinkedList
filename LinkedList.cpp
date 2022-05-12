@@ -171,4 +171,12 @@ void LinkedList::printItems() {
 
 LinkedList::~LinkedList() {
     // deletes each one by 1
+    Node * currentNode = head;
+
+    while (currentNode != NULL) {
+        Node * nextNode = currentNode->getNext();
+        head = nextNode;
+        delete currentNode;
+        currentNode = currentNode->getNext();
+    }
 }
