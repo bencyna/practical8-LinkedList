@@ -38,13 +38,24 @@ void LinkedList::addAtPosition(int position, int newItem) {
 
 int LinkedList::search(int item) {
     Node * currentNode = this->head;
-    int currentPosition = 1;
+    int currentPosition = 0;
     while (currentNode->getData() != item && currentNode->getNext()) {
         currentNode = currentNode->getNext();
         currentPosition++;
     }
 
-    return currentPosition;
+    if (currentNode->getData() == item) {
+        currentPosition++;
+
+        cout << currentPosition << endl;
+
+        return currentPosition;
+    }
+
+    cout << 0 << endl;
+
+    return 0;
+    
 }
 
 void LinkedList::deleteFront() {

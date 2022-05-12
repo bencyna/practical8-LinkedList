@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-    int list[3] = {1, 2, 3};
+    // int list[3] = {1, 2, 3};
 
     LinkedList linkedList;
     linkedList.addFront(1);
@@ -15,7 +15,7 @@ int main() {
     linkedList.addFront(32);
     linkedList.addFront(342);
 
-    cout << linkedList.search(1) << endl;
+    cout << linkedList.search(343) << endl;
 
     return 0; 
 }
