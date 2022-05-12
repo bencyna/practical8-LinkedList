@@ -12,12 +12,12 @@ LinkedList::LinkedList()
 
 LinkedList::LinkedList(int list[100], int size)
 {
-    head = new Node(list[0], this->head);
-    Node *prevNode = head;
+    head = new Node(list[size-1], NULL);
 
-    for (int i = 1; i < size; i++) {
-        Node* node = new Node(list[i], this->head);
-        prevNode->setNext(node);
+    for (int i = size-2; i >= 0; i--) {
+        Node* node = new Node(list[i], NULL); 
+        node->setNext(head); 
+        head = node; 
     }
 }
 
@@ -75,7 +75,11 @@ int LinkedList::getItem(int position) {
 }
 
 void LinkedList::printItems() {
-
+    Node * currentNode = this->head;
+    while (currentNode) {
+        cout << currentNode->getData();
+        currentNode = currentNode->getNext();
+    }
 }
 
 LinkedList::~LinkedList() {
