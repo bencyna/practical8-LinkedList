@@ -103,7 +103,33 @@ void LinkedList::deleteEnd() {
 }
 
 void LinkedList::deletePosition(int position) {
+    if (position < 1) {
+        cout << "outside range" << endl;
+        return;
+    }
+    if (position == 1) {
+        this->deleteFront();
+        return;
+    }
 
+    int index = 0;
+
+    Node * currentNode = head;
+    Node * prevNode = NULL;
+
+
+    while (currentNode != NULL) {
+        if (index == position-1) {
+            prevNode->setNext(currentNode->getNext());
+            delete currentNode;
+            return;
+        }
+
+        prevNode = currentNode;
+        currentNode = currentNode->getNext();
+        index++;
+    }
+    cout << "outside range" << endl;
 }
 
 int LinkedList::getItem(int position) {
