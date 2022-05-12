@@ -12,7 +12,6 @@ LinkedList::LinkedList()
 
 LinkedList::LinkedList(int list[100], int size)
 {
-    // meed to change thjis
     head = new Node(list[0], this->head);
     Node *prevNode = head;
 
@@ -40,12 +39,10 @@ void LinkedList::addAtPosition(int position, int newItem) {
 int LinkedList::search(int item) {
     Node * currentNode = this->head;
     int currentPosition = 1;
-    while (currentNode->getData() != item) {
+    while (currentNode->getData() != item && currentNode->getNext()) {
         currentNode = currentNode->getNext();
         currentPosition++;
     }
-
-    cout << currentPosition << endl;
 
     return currentPosition;
 }
@@ -63,7 +60,7 @@ void LinkedList::deletePosition(int position) {
 }
 
 int LinkedList::getItem(int position) {
-
+    return position;
 }
 
 void LinkedList::printItems() {
