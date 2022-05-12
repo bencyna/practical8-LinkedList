@@ -28,8 +28,12 @@ void LinkedList::addFront(int newItem) {
 }
 
 void LinkedList::addEnd(int newItem) {
-    Node* node = new Node(newItem, this->head);
-
+    Node * currentNode = head;
+    while (currentNode->getNext() != NULL) {
+        currentNode = currentNode->getNext();
+    }
+    Node* node = new Node(newItem, NULL);
+    currentNode->setNext(node);
 }
 
 void LinkedList::addAtPosition(int position, int newItem) {
