@@ -11,7 +11,7 @@ int main() {
     int list[5] = {1, 2, 3, 4, 5};
 
     LinkedList linkedList(list, 5);
-    linkedList.deletePosition(6);
+    linkedList.getItem(6);
 
 
     linkedList.printItems();

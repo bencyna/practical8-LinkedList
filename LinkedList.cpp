@@ -133,7 +133,32 @@ void LinkedList::deletePosition(int position) {
 }
 
 int LinkedList::getItem(int position) {
-    return position;
+    
+    if (position < 1) {
+        cout << "std::numeric_limits < int >::max() " << endl;
+        return 0;
+    }
+
+    int index = 0;
+
+    Node * currentNode = head;
+    Node * prevNode = NULL;
+
+
+    while (currentNode != NULL) {
+        if (index == position-1) {
+            int data = currentNode->getData();
+            cout << data << endl;
+            return  data;
+        }
+
+        prevNode = currentNode;
+        currentNode = currentNode->getNext();
+        index++;
+    }
+    cout << "std::numeric_limits < int >::max() " << endl;
+
+    return 0;
 }
 
 void LinkedList::printItems() {
@@ -145,5 +170,5 @@ void LinkedList::printItems() {
 }
 
 LinkedList::~LinkedList() {
-
+    // deletes each one by 1
 }
