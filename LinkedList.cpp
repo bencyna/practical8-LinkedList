@@ -91,7 +91,15 @@ void LinkedList::deleteFront() {
 }
 
 void LinkedList::deleteEnd() {
+    Node * currentNode = head;
+    Node * prevNode = NULL;
+    while (currentNode->getNext() != NULL) {
+        prevNode = currentNode;
+        currentNode = currentNode->getNext();
+    }
 
+    prevNode->setNext(NULL);
+    delete currentNode;
 }
 
 void LinkedList::deletePosition(int position) {
