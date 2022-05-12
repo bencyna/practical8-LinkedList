@@ -37,7 +37,27 @@ void LinkedList::addEnd(int newItem) {
 }
 
 void LinkedList::addAtPosition(int position, int newItem) {
-  
+  if (position <= 1) {
+      this->addFront(newItem);
+  }
+
+  int index = 0;
+
+  Node * currentNode = head;
+  Node * prevNode = NULL;
+
+
+  while (currentNode != NULL) {
+      if (index == position-1) {
+          Node* newNode = new Node(newItem, currentNode);
+          prevNode->setNext(newNode);
+          return;
+      }
+
+      prevNode = currentNode;
+      currentNode = currentNode->getNext();
+      index++;
+  }
 }
 
 int LinkedList::search(int item) {
