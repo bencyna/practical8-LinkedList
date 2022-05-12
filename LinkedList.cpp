@@ -58,6 +58,8 @@ void LinkedList::addAtPosition(int position, int newItem) {
       currentNode = currentNode->getNext();
       index++;
   }
+
+  this->addEnd(newItem);
 }
 
 int LinkedList::search(int item) {
@@ -83,7 +85,9 @@ int LinkedList::search(int item) {
 }
 
 void LinkedList::deleteFront() {
-
+    Node * nextHead = head->getNext();
+    delete head;
+    head = nextHead;
 }
 
 void LinkedList::deleteEnd() {
