@@ -142,8 +142,6 @@ int LinkedList::getItem(int position) {
     int index = 0;
 
     Node * currentNode = head;
-    Node * prevNode = NULL;
-
 
     while (currentNode != NULL) {
         if (index == position-1) {
@@ -152,7 +150,6 @@ int LinkedList::getItem(int position) {
             return  data;
         }
 
-        prevNode = currentNode;
         currentNode = currentNode->getNext();
         index++;
     }
