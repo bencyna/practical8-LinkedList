@@ -16,12 +16,12 @@ int main() {
 
 
      while (std::cin >> i) {
-        int num = stoi(i);
-        if (num)    {
+         try {
+            int num = stoi(i);
             list[index] = num;
             index++;
         }
-        else {
+        catch (std::exception) {
             functionCode = i;
             break;
         }
@@ -30,8 +30,8 @@ int main() {
     cin >> param1;
     cin >> param2;
 
-
-    LinkedList linkedList(list, 100);
+    
+    LinkedList linkedList(list, index);
 
 
     linkedList.printItems();
