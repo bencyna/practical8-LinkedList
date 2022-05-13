@@ -146,13 +146,14 @@ int LinkedList::getItem(int position) {
     while (currentNode != NULL) {
         if (index == position-1) {
             int data = currentNode->getData();
-            cout << data << endl;
+            cout << data << " ";
             return  data;
         }
 
         currentNode = currentNode->getNext();
         index++;
     }
+
     cout << "std::numeric_limits < int >::max() " << endl;
 
     return 0;
@@ -161,7 +162,7 @@ int LinkedList::getItem(int position) {
 void LinkedList::printItems() {
     Node * currentNode = this->head;
     while (currentNode) {
-        cout << currentNode->getData();
+        cout << currentNode->getData() << " ";
         currentNode = currentNode->getNext();
     }
 }
