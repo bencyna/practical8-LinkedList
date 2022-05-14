@@ -16,6 +16,7 @@ int main() {
 
 
      while (std::cin >> i) {
+        //  Check for integer found here https://stackoverflow.com/questions/4654636/how-to-determine-if-a-string-is-a-number-with-c
         if (!i.empty() && i.find_first_not_of("0123456789") == std::string::npos) {
             int num = stoi(i);
             list[index] = num;
