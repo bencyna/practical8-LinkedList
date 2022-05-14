@@ -21,7 +21,7 @@ int main() {
             list[index] = num;
             index++;
         }
-        catch (std::exception) {
+        catch (std::invalid_argument const&) {
             functionCode = i;
             break;
         }
