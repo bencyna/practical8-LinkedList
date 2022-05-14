@@ -16,12 +16,12 @@ int main() {
 
 
      while (std::cin >> i) {
-         try {
+        if (!i.empty() && i.find_first_not_of("0123456789") == std::string::npos) {
             int num = stoi(i);
             list[index] = num;
             index++;
         }
-        catch (std::invalid_argument const&) {
+        else {
             functionCode = i;
             break;
         }
