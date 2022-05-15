@@ -14,9 +14,9 @@ int main() {
     int param2;
     string i;
 
-     while (std::cin >> i) {
+     while (cin >> i) {
         //  Check for integer found here https://stackoverflow.com/questions/4654636/how-to-determine-if-a-string-is-a-number-with-c
-        if (!i.empty() && i.find_first_not_of("0123456789") == std::string::npos) {
+        if (!i.empty() && i.find_first_not_of("0123456789") == string::npos) {
             int num = stoi(i);
             list[index] = num;
             index++;
@@ -33,6 +33,8 @@ int main() {
     for (int i = 0; i < index; i++) {
         cout << list[i] <<" ";
     }
+
+    cout << index << endl;
     
     LinkedList linkedList(list, index);
 
