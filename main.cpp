@@ -30,12 +30,6 @@ int main() {
     cin >> param1;
     cin >> param2;
     
-    for (int i = 0; i < index; i++) {
-        cout << list[i] <<" ";
-    }
-
-    cout << index << endl;
-    
     LinkedList linkedList(list, index);
 
     if (functionCode == "AF") {
