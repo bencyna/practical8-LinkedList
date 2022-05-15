@@ -30,6 +30,8 @@ int main() {
     cin >> param1;
     cin >> param2;
     
+    cout <<functionCode << endl;
+
     LinkedList linkedList(list, index);
 
     if (functionCode == "AF") {
@@ -39,7 +41,6 @@ int main() {
         linkedList.addEnd(param1);
     }
     else if (functionCode == "AP") {
-        cout << "functione called";
         linkedList.addAtPosition(param1, param2);
     }
     else if (functionCode == "S") {
