@@ -39,6 +39,7 @@ int main() {
         linkedList.addEnd(param1);
     }
     else if (functionCode == "AP") {
+        cout << "functione called";
         linkedList.addAtPosition(param1, param2);
     }
     else if (functionCode == "S") {
