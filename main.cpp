@@ -22,21 +22,19 @@ int main() {
     for (int i = 0; i < line.length(); i++) {
         if (line[i] == ' ') {
             // check if temp is a number 
-            if (!temp.empty() && temp.find_first_not_of("0123456789") == std::string::npos && listValue) {
+            if (!temp.empty() && temp.find_first_not_of("0123456789") == string::npos && listValue) {
                 int num = stoi(temp);
                 list[index] = num;
                 index++;
                 temp = "";
             }
-            else if (!temp.empty() && temp.find_first_not_of("0123456789") == std::string::npos && !listValue) {
+            else if (!temp.empty() && temp.find_first_not_of("0123456789") == string::npos && !listValue) {
                 if (!param1Entered) {
-                    cout << "temp1: " << temp << endl;
                     param1 = stoi(temp);
                     param1Entered = true;
                     temp = "";
                 }
                 else {
-                    cout <<"temp " << temp << endl;
                     param2 = stoi(temp);
                 }
             }
