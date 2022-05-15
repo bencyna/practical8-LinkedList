@@ -11,45 +11,26 @@ int main() {
     int index = 0;
     string functionCode;
     int param1;
-    bool param1Entered = false;
     int param2;
-    bool listValue = true;
-    string temp = "";
-    string line;
+    string i;
 
-    getline(cin, line);
-
-    for (int i = 0; i < line.length(); i++) {
-        if (line[i] == ' ') {
-            // check if temp is a number 
-            if (!temp.empty() && temp.find_first_not_of("0123456789") == string::npos && listValue) {
-                int num = stoi(temp);
-                list[index] = num;
-                index++;
-                temp = "";
-            }
-            else if (!temp.empty() && temp.find_first_not_of("0123456789") == string::npos && !listValue) {
-                if (!param1Entered) {
-                    param1 = stoi(temp);
-                    param1Entered = true;
-                    temp = "";
-                }
-                else {
-                    param2 = stoi(temp);
-                }
-            }
-            else {
-                functionCode = temp;
-                temp = "";
-                listValue = false;
-            }
+     while (std::cin >> i) {
+        //  Check for integer found here https://stackoverflow.com/questions/4654636/how-to-determine-if-a-string-is-a-number-with-c
+        if (!i.empty() && i.find_first_not_of("0123456789") == std::string::npos) {
+            int num = stoi(i);
+            list[index] = num;
+            index++;
         }
         else {
-            temp = temp + line[i];
+            functionCode = i;
+            break;
         }
-    }    
-  
- 
+    }
+
+    cin >> param1;
+    cin >> param2;
+    
+    
     LinkedList linkedList(list, index);
 
     if (functionCode == "AF") {

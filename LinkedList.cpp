@@ -59,6 +59,7 @@ void LinkedList::addAtPosition(int position, int newItem) {
       index++;
   }
 
+
   this->addEnd(newItem);
 }
 
