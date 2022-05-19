@@ -32,6 +32,9 @@ int main() {
     
     LinkedList linkedList(list, index);
 
+    linkedList.printItems();
+
+
     if (functionCode == "AF") {
         linkedList.addFront(param1);
     }
