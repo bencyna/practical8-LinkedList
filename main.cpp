@@ -30,8 +30,6 @@ int main() {
     cin >> param1;
     cin >> param2;
     
-    cout <<functionCode << endl;
-
     LinkedList linkedList(list, index);
 
     if (functionCode == "AF") {
