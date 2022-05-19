@@ -30,14 +30,7 @@ int main() {
     cin >> param1;
     cin >> param2;
     
-for (int i = 0; i < index; i++) {
-    cout << list[i] << endl;
-}
-
     LinkedList linkedList(list, index);
-
-    linkedList.printItems();
-
 
     if (functionCode == "AF") {
         linkedList.addFront(param1);
