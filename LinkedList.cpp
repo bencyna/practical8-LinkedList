@@ -163,8 +163,8 @@ int LinkedList::getItem(int position) {
 void LinkedList::printItems() {
     Node * currentNode = this->head;
     while (currentNode) {
-    // cout << "hello" << endl;
-        cout << currentNode->getData() << " ";
+        cout << currentNode->getData();
+        cout << " " << endl;
         currentNode = currentNode->getNext();
     }
 }
